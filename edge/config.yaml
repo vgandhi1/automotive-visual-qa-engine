@@ -1,0 +1,35 @@
+device_id: "edge-dev-001"
+vin: "TESTVIN0000000001"
+
+camera:
+  width: 1280
+  height: 720
+  fps: 30
+  ring_buffer_frames: 10
+  synthetic: false
+
+model:
+  name: "openai/clip-vit-base-patch32"
+  prompts_path: "prompts.json"
+  use_tensorrt: false
+  tensorrt_engine_path: null
+
+mqtt:
+  enabled: true
+  host: "${IOT_ENDPOINT}"
+  port: 8883
+  use_tls: true
+  ca_path: "${AWS_IOT_CA}"
+  cert_path: "${AWS_IOT_CERT}"
+  key_path: "${AWS_IOT_KEY}"
+  client_id: "automotive-edge-${device_id}"
+  topic_prefix: "vehicles"
+  qos: 1
+  health_interval_sec: 300
+
+offline:
+  sqlite_path: "edge_offline_queue.db"
+  max_retries: 5
+
+paths:
+  prompts_json: "prompts.json"

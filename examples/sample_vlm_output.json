@@ -1,0 +1,9 @@
+{
+  "defect_type": "scratch",
+  "severity": "minor",
+  "location_description": "front left quarter panel, ~2 inches long",
+  "repair_action": "sand and spot repaint",
+  "rework_station": "paint_touch_up_bay",
+  "repair_time_minutes": 35,
+  "confidence": 0.92
+}

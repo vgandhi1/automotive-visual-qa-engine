@@ -1,0 +1,26 @@
+{
+  "model": {
+    "clip_version": "vit-b-32",
+    "tensorrt_precision": "int8",
+    "model_s3_path": "s3://automotive-quality-data/models/clip-vit-b32-int8.trt"
+  },
+  "prompts": {
+    "pass": [
+      "a smooth painted car body surface without defects",
+      "pristine automotive paint with no scratches or drips"
+    ],
+    "defect": [
+      "a deep scratch on painted car body",
+      "paint drip or sag on vehicle surface",
+      "weld seam gap or incomplete fusion",
+      "dent or surface deformation",
+      "paint bubble or blister",
+      "overspray or contamination on car body"
+    ]
+  },
+  "routing": {
+    "confidence_threshold": 0.75,
+    "min_crop_size_px": 500,
+    "max_anomaly_crops_per_batch": 10
+  }
+}

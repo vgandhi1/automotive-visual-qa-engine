@@ -1,0 +1,11 @@
+{
+  "comment": "Reference skeleton for SageMaker serverless VLM deployment (PaliGemma / TGI).",
+  "endpoint_name": "paligemma-defect-vlm",
+  "variant_name": "AllTraffic",
+  "serverless_config": {
+    "memory_size_in_mb": 6144,
+    "max_concurrency": 20
+  },
+  "model_data_url": "s3://automotive-quality-data/models/vlm/",
+  "image": "huggingface/huggingface-pytorch-tgi:2.0.1"
+}

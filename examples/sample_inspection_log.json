@@ -1,0 +1,8 @@
+{
+  "device_id": "edge-dev-001",
+  "vin": "SAMPLEVIN00000001",
+  "clip_label": "PASS",
+  "clip_confidence": 0.88,
+  "inference_latency_ms": 142.3,
+  "escalate": false
+}

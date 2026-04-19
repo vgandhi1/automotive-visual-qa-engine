@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# ML / large artifacts
+*.onnx
+*.trt
+*.engine
+*.pt
+*.pth
+*.bin
+models/
+checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+tfplan
+crash.log
+
+# Secrets (never commit)
+*.pem
+*.key
+certs/
+
+# Logs
+*.log
+latency_report.json

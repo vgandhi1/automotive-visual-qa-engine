@@ -1,0 +1,26 @@
+[
+  {
+    "ruleName": "inspection_frame_raw",
+    "sql": "SELECT * FROM 'vehicles/+/inspection/frame_raw'",
+    "description": "Route PASS-path frames to edge_frame_processor Lambda",
+    "actions": [
+      {
+        "lambda": {
+          "functionArn": "arn:aws:lambda:REGION:ACCOUNT:function:automotive-quality-edge-frame-processor"
+        }
+      }
+    ]
+  },
+  {
+    "ruleName": "inspection_anomaly_crop",
+    "sql": "SELECT * FROM 'vehicles/+/inspection/anomaly_crop'",
+    "description": "Route anomaly crops to anomaly_escalation Lambda",
+    "actions": [
+      {
+        "lambda": {
+          "functionArn": "arn:aws:lambda:REGION:ACCOUNT:function:automotive-quality-anomaly-escalation"
+        }
+      }
+    ]
+  }
+]
