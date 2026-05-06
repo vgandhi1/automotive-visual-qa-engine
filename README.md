@@ -5,7 +5,17 @@
 [![TensorRT](https://img.shields.io/badge/TensorRT-8.2%2B-green)](https://developer.nvidia.com/tensorrt)
 [![AWS](https://img.shields.io/badge/AWS-IoT%20%7C%20Lambda%20%7C%20SageMaker-orange)](https://aws.amazon.com/)
 
-**Production-ready reference implementation: Automated defect detection & intelligent rework routing for automotive manufacturing. Jetson Nano edge inference (CLIP) → AWS serverless orchestration (Lambda, Step Functions) → SAP ERP integration.**
+## Application & Data / AI analytics highlights
+
+| Lens | What this project delivers |
+|------|----------------------------|
+| **Application** | **Automotive trim / surface visual QA**—camera-based pass–fail and anomaly cues at the line, with escalation paths toward rework and ERP/MES—not just a notebook demo. |
+| **Computer vision (AI)** | **CLIP-class** inspection at the **edge** (Jetson-first, CPU fallback): embedding similarity / saliency cues for anomalies before or instead of heavier cloud models. |
+| **Streaming data & orchestration** | **IoT → serverless pipeline** (MQTT/SQS/Lambdas/Step Functions) for frame handling, escalation, and VLM stubs—patterns for throughput, backpressure, and audit-friendly handoffs. |
+| **Operational analytics** | **MES-style API** (**FastAPI**) with **DynamoDB** persistence and optional **SNS**—structured defect/pass logs suitable for dashboards, pareto analysis, and route-time KPIs over time. |
+| **Benchmarking / MLOps** | **`mlops/`** stubs for latency and evaluation—foundation for tracking model drift, line-to-line variance, and release gates on inspection policies. |
+
+**Production-ready reference implementation: Automated defect detection & intelligent rework routing for automotive manufacturing. Jetson Nano edge inference (CLIP) → AWS serverless orchestration (Lambda, Step Functions) → SAP ERP integration.** See [plan.md](plan.md) for the full architecture.
 
 ---
 
